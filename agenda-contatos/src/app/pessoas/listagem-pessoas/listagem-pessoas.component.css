@@ -1,0 +1,29 @@
+* {
+    margin: 5px;
+}
+
+form * {
+    float: left;
+    padding: 2px;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead tr {
+    height: 50px;
+}
+
+thead td {
+    background-color: #aaa;
+}
+
+td {
+    padding: 5px;
+}

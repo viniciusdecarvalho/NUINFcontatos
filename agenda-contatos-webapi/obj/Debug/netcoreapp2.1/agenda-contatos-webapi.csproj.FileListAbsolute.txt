@@ -1,0 +1,14 @@
+/Users/admin/Projects/NUINF/agenda-contatos-webapi/bin/Debug/netcoreapp2.1/agenda-contatos-webapi.deps.json
+/Users/admin/Projects/NUINF/agenda-contatos-webapi/bin/Debug/netcoreapp2.1/agenda-contatos-webapi.runtimeconfig.json
+/Users/admin/Projects/NUINF/agenda-contatos-webapi/bin/Debug/netcoreapp2.1/agenda-contatos-webapi.runtimeconfig.dev.json
+/Users/admin/Projects/NUINF/agenda-contatos-webapi/bin/Debug/netcoreapp2.1/agenda-contatos-webapi.dll
+/Users/admin/Projects/NUINF/agenda-contatos-webapi/bin/Debug/netcoreapp2.1/agenda-contatos-webapi.pdb
+/Users/admin/Projects/NUINF/agenda-contatos-webapi/obj/Debug/netcoreapp2.1/agenda-contatos-webapi.csprojAssemblyReference.cache
+/Users/admin/Projects/NUINF/agenda-contatos-webapi/obj/Debug/netcoreapp2.1/agenda-contatos-webapi.csproj.CoreCompileInputs.cache
+/Users/admin/Projects/NUINF/agenda-contatos-webapi/obj/Debug/netcoreapp2.1/agenda-contatos-webapi.RazorAssemblyInfo.cache
+/Users/admin/Projects/NUINF/agenda-contatos-webapi/obj/Debug/netcoreapp2.1/agenda-contatos-webapi.RazorAssemblyInfo.cs
+/Users/admin/Projects/NUINF/agenda-contatos-webapi/obj/Debug/netcoreapp2.1/agenda-contatos-webapi.AssemblyInfoInputs.cache
+/Users/admin/Projects/NUINF/agenda-contatos-webapi/obj/Debug/netcoreapp2.1/agenda-contatos-webapi.AssemblyInfo.cs
+/Users/admin/Projects/NUINF/agenda-contatos-webapi/obj/Debug/netcoreapp2.1/agenda-contatos-webapi.RazorTargetAssemblyInfo.cache
+/Users/admin/Projects/NUINF/agenda-contatos-webapi/obj/Debug/netcoreapp2.1/agenda-contatos-webapi.dll
+/Users/admin/Projects/NUINF/agenda-contatos-webapi/obj/Debug/netcoreapp2.1/agenda-contatos-webapi.pdb

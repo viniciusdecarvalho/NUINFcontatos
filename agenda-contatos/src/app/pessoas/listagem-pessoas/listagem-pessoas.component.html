@@ -1,0 +1,129 @@
+<!-- <div>
+  
+  <p>Listagem de Pessoas</p>
+<div>
+  <form>
+    <div>
+      <label for="nome">Nome:</label>
+      <input type="text" name="nome" [(ngModel)]="params.nome">
+    </div>
+    <div>
+      <label for="cpf">CPF:</label>
+      <input type="text" name="cpf" [(ngModel)]="params.cpf">
+    </div>
+    <div>
+      <label></label>
+      <button type="submit" (click)="pesquisar()">Pesquisar</button>
+    </div>
+    <div>
+      <label></label>
+      <button type="button" routerLink="/pessoas/editar/0">Cadastrar</button>
+    </div>
+  </form>
+</div>
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>Nome</td>
+        <td>E-Mail</td>
+        <td>CPF</td>
+        <td>Idade</td>
+        <td>Quantidade Telefones</td>
+        <td>Ações</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pessoa of pessoas">
+        <td>{{pessoa.id}}</td>
+        <td>{{pessoa.nome}}</td>
+        <td>{{pessoa.email}}</td>
+        <td>{{pessoa.cpf}}</td>
+        <td>{{pessoa.idade}}</td>
+        <td>{{pessoa.telefones.length}}</td>
+        <td>
+          <a routerLink="/pessoas/editar/{{pessoa.id}}">Editar</a>
+          |
+          <a (click)="deletarPessoa(pessoa)">Deletar</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+</div>  -->
+
+<mat-toolbar>Listagem de pessoas</mat-toolbar>
+<div>
+  <mat-form-field>
+    <input matInput placeholder="Nome" [(ngModel)]="params.nome">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="CPF" [(ngModel)]="params.cpf">
+  </mat-form-field>
+
+  <button mat-button type="submit" (click)="pesquisar()">
+    Pesquisar
+    <mat-icon>search</mat-icon>
+  </button>
+
+  <button mat-button type="button" (click)="cadastrarPessoa()">
+    Cadastrar
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
+
+<table mat-table [dataSource]="pessoas" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> ID. </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="nome">
+    <th mat-header-cell *matHeaderCellDef> Nome </th>
+    <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> E-Mail </th>
+    <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="cpf">
+    <th mat-header-cell *matHeaderCellDef> CPF </th>
+    <td mat-cell *matCellDef="let element"> {{element.cpf}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="idade">
+    <th mat-header-cell *matHeaderCellDef> Idade </th>
+    <td mat-cell *matCellDef="let element"> {{element.idade}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="quant_telefones">
+    <th mat-header-cell *matHeaderCellDef> Quantidade de telefones </th>
+    <td mat-cell *matCellDef="let element"> {{element.telefones.length}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="acao">
+    <th mat-header-cell *matHeaderCellDef> Ações </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-button (click)="editarPessoa(element)">
+        Editar
+        <mat-icon>edit</mat-icon>
+      </button>
+      |
+      <button mat-button (click)="deletarPessoa(element)">
+        Deletar
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

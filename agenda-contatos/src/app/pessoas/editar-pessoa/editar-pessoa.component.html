@@ -1,0 +1,75 @@
+<p>
+  editar-pessoa works!
+</p>
+<p>{{action}}</p>
+<br />
+
+<div>
+  {{ pessoa | json }}
+  <form>
+    <div>
+        <label for="nome">Nome:</label>
+        <input matInput type="text" name="nome" [(ngModel)]="pessoa.nome" required/>
+        <label for="cpf">CPF:</label>
+        <input matInput type="text" name="cpf" [(ngModel)]="pessoa.cpf" required/>
+    </div>
+    <div>
+      <div>
+        <label for="email">E-Mail:</label>
+        <input type="text" name="email" [(ngModel)]="pessoa.email" required/>
+      </div>
+      <div>
+        <label for="dataNascimento">Data de nascimento:</label>
+        <input type="date" name="dataNascimento" [ngModel]="pessoa.dataNascimento | date: 'yyyy-MM-dd'" (ngModelChange)="pessoa.dataNascimento = $event"
+          required />
+      </div>
+    </div>
+
+    <hr> {{ novoTelefone | json }}
+    <div>
+      <label for="ddd">DDD:</label>
+      <input type="number" name="ddd" [(ngModel)]="novoTelefone.ddd" />
+    </div>
+
+    <div>
+      <label for="telefone">Telefone:</label>
+      <input type="number" name="telefone" [(ngModel)]="novoTelefone.numero" />
+    </div>
+
+    <div>
+      <button type="button" (click)="adicionarTelefone(novoTelefone)">Adicionar</button>
+    </div>
+
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <td>ID</td>
+            <td>DDD</td>
+            <td>Telefone</td>
+            <td>Ações</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let telefone of pessoa.telefones">
+            <td>{{telefone.id}}</td>
+            <td>{{telefone.ddd}}</td>
+            <td>{{telefone.numero}}</td>
+            <td>
+              <a (click)="removerTelefone(telefone)">Deletar</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+    <div>
+      <button type="submit" (click)="salvarPessoa()">{{pessoa.id > 0 ? 'Atualizar' : 'Cadastrar'}}</button>
+    </div>
+
+  </form>
+
+</div>
+
+<a routerLink="/pessoas">Voltar</a>
